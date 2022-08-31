@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Trustline_Technical_Assessment/static/css/main.d3aef832.css",
+    "main.js": "/Trustline_Technical_Assessment/static/js/main.be490105.js",
+    "static/media/DPpkhkoWsAAp5HZ 1.png": "/Trustline_Technical_Assessment/static/media/DPpkhkoWsAAp5HZ 1.2d9ca89eb6c1ec98be2d.png",
+    "static/media/laptop.png": "/Trustline_Technical_Assessment/static/media/laptop.afd00c2a48d6d82ed7ad.png",
+    "static/media/fa-solid-900.ttf": "/Trustline_Technical_Assessment/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
+    "static/media/codeScreen.png": "/Trustline_Technical_Assessment/static/media/codeScreen.6cc43b0403dfee60d7c8.png",
+    "static/media/fa-brands-400.ttf": "/Trustline_Technical_Assessment/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
+    "static/media/fa-solid-900.woff2": "/Trustline_Technical_Assessment/static/media/fa-solid-900.64d495f582d4a1590a6c.woff2",
+    "static/media/fa-brands-400.woff2": "/Trustline_Technical_Assessment/static/media/fa-brands-400.a914b121110f8b6e01c9.woff2",
+    "static/media/fa-regular-400.ttf": "/Trustline_Technical_Assessment/static/media/fa-regular-400.625dca125b58060788da.ttf",
+    "static/media/news2.png": "/Trustline_Technical_Assessment/static/media/news2.042ffd9e08c2958e27d5.png",
+    "static/media/news1.png": "/Trustline_Technical_Assessment/static/media/news1.c7fe4fbb82a0e805f750.png",
+    "static/media/monshat-logo.png": "/Trustline_Technical_Assessment/static/media/monshat-logo.e42fbf557967f37a4e6f.png",
+    "static/media/news3.png": "/Trustline_Technical_Assessment/static/media/news3.c33dbd71c08c6ffb034c.png",
+    "static/media/fa-regular-400.woff2": "/Trustline_Technical_Assessment/static/media/fa-regular-400.47074dec01b64a5db2c4.woff2",
+    "static/media/marsad-logo.png": "/Trustline_Technical_Assessment/static/media/marsad-logo.513b8679c25d34493d90.png",
+    "static/media/zid-logo.png": "/Trustline_Technical_Assessment/static/media/zid-logo.c1eac1dfcfba195524a9.png",
+    "static/media/fa-v4compatibility.ttf": "/Trustline_Technical_Assessment/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Trustline_Technical_Assessment/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
+    "index.html": "/Trustline_Technical_Assessment/index.html",
+    "main.d3aef832.css.map": "/Trustline_Technical_Assessment/static/css/main.d3aef832.css.map",
+    "main.be490105.js.map": "/Trustline_Technical_Assessment/static/js/main.be490105.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3aef832.css",
+    "static/js/main.be490105.js"
+  ]
+}
