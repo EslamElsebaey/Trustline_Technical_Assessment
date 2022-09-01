@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Trustline_Technical_Assessment/static/css/main.d3aef832.css",
-    "main.js": "/Trustline_Technical_Assessment/static/js/main.be490105.js",
+    "main.js": "/Trustline_Technical_Assessment/static/js/main.866ad7bb.js",
     "static/media/DPpkhkoWsAAp5HZ 1.png": "/Trustline_Technical_Assessment/static/media/DPpkhkoWsAAp5HZ 1.2d9ca89eb6c1ec98be2d.png",
     "static/media/laptop.png": "/Trustline_Technical_Assessment/static/media/laptop.afd00c2a48d6d82ed7ad.png",
     "static/media/fa-solid-900.ttf": "/Trustline_Technical_Assessment/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
@@ -21,10 +21,10 @@
     "static/media/fa-v4compatibility.woff2": "/Trustline_Technical_Assessment/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
     "index.html": "/Trustline_Technical_Assessment/index.html",
     "main.d3aef832.css.map": "/Trustline_Technical_Assessment/static/css/main.d3aef832.css.map",
-    "main.be490105.js.map": "/Trustline_Technical_Assessment/static/js/main.be490105.js.map"
+    "main.866ad7bb.js.map": "/Trustline_Technical_Assessment/static/js/main.866ad7bb.js.map"
   },
   "entrypoints": [
     "static/css/main.d3aef832.css",
-    "static/js/main.be490105.js"
+    "static/js/main.866ad7bb.js"
   ]
 }
