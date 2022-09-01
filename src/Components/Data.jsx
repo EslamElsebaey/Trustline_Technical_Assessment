@@ -41,7 +41,7 @@ export default function Data() {
         $(".title").val("");
         $(".body").val("")
       }else{
-        alert("You Shoild fill the Inputs")
+        alert("You Should fill the Inputs")
       }
     }
 
@@ -58,7 +58,8 @@ export default function Data() {
 
     
     function updatePost(){
-      let itemId = JSON.parse(localStorage.getItem("itemId")) 
+      if( $(".title").val() !== "" && $(".body").val() !== "" ){
+         let itemId = JSON.parse(localStorage.getItem("itemId")) 
        let myData =  JSON.parse(localStorage.getItem("myData"))  ;
        let item =   myData.filter( (x)=>{
         return Number(x.id) === Number(itemId) 
@@ -69,6 +70,9 @@ export default function Data() {
         setPosts(myData)
         $(".title").val("");
         $(".body").val("");
+      }else{
+        alert("You Should fill the Inputs")
+      }
     }
 
     

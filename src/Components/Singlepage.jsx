@@ -48,7 +48,7 @@ export default function Singlepage() {
         $(".body").val("");
       }
     }else{
-      alert("You Shoild fill the Inputs")
+      alert("You Should fill the Inputs")
     }
    
     
