@@ -896,7 +896,11 @@ display: inline-block;
 
 /* Data */
 .posts{
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #EAF7FF;
+}
+.postsNumber{
+    background-color: #ffffff;
 }
 .post-item , .item  , .myForm{
     min-height: 280px;

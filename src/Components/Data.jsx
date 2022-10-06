@@ -12,13 +12,13 @@ export default function Data() {
 
 
     async function getPosts (){
-      if(localStorage.getItem("myData")){
-        let myData = JSON.parse(localStorage.getItem("myData")) ;
-        setPosts(myData)
+      if(localStorage.getItem("postsData")){
+        let postsData = JSON.parse(localStorage.getItem("postsData")) ;
+        setPosts(postsData)
       }else{
         let {data} = await axios.get("https://jsonplaceholder.typicode.com/posts");
         setPosts(data)
-        localStorage.setItem("myData" , JSON.stringify(data))
+        localStorage.setItem("postsData" , JSON.stringify(data))
       }
     }
 
@@ -36,10 +36,11 @@ export default function Data() {
       if(Object.keys(newPost).length > 1){
         let myArray = [...posts] ; 
         myArray.push(newPost);
-        localStorage.setItem("myData" , JSON.stringify(myArray));
+        localStorage.setItem("postsData" , JSON.stringify(myArray));
         setPosts(myArray);
         $(".title").val("");
         $(".body").val("")
+        console.log(newPost.id)
       }else{
         alert("You Should fill the Inputs")
       }
@@ -47,11 +48,11 @@ export default function Data() {
 
     
     function deletePost(e){
-       let myData = JSON.parse(localStorage.getItem("myData")) ;
-       let newData = myData.filter((item)=>{
+       let postsData = JSON.parse(localStorage.getItem("postsData")) ;
+       let newData = postsData.filter((item)=>{
         return  Number(item.id)   !==  Number( e.target.attributes.postid.value)
        })
-       localStorage.setItem("myData" , JSON.stringify(newData));
+       localStorage.setItem("postsData" , JSON.stringify(newData));
        setPosts(newData)
     }
 
@@ -60,14 +61,14 @@ export default function Data() {
     function updatePost(){
       if( $(".title").val() !== "" && $(".body").val() !== "" ){
          let itemId = JSON.parse(localStorage.getItem("itemId")) 
-       let myData =  JSON.parse(localStorage.getItem("myData"))  ;
-       let item =   myData.filter( (x)=>{
+       let postsData =  JSON.parse(localStorage.getItem("postsData"))  ;
+       let item =   postsData.filter( (x)=>{
         return Number(x.id) === Number(itemId) 
       } )
          item[0].title = $(".title").val();
          item[0].body = $(".body").val();
-        localStorage.setItem("myData" , JSON.stringify(myData))
-        setPosts(myData)
+        localStorage.setItem("postsData" , JSON.stringify(postsData))
+        setPosts(postsData)
         $(".title").val("");
         $(".body").val("");
       }else{
@@ -77,8 +78,16 @@ export default function Data() {
 
     
 
-    function getId(e){
+    function showModalAndGetId(e){
+      let postsData = JSON.parse(localStorage.getItem("postsData")) ;
+      let postToUpdate = postsData.filter((item)=>{
+        return  Number(item.id)   ===  Number( e.target.attributes.postid.value)
+       })
+       postToUpdate = postToUpdate[0] ; 
+       $(".modal-body .title").val(postToUpdate.title) ; 
+       $(".modal-body .body").val(postToUpdate.body) ; 
       let itemId = e.target.attributes.postid.value;
+      
       localStorage.setItem("itemId" , JSON.stringify(itemId));
     }
 
@@ -124,8 +133,8 @@ export default function Data() {
                   <button onClick={addPostAtPage} id="addPostBtn"  className='btn btn-primary '>Add Post</button>
                 </div>
               </div>
-              <div className="   col-md-6 number-order  shadow align-self-start ">
-                <div className='text-center text-black fs-4 p-4'>
+              <div className="   col-md-6 number-order bg-white  shadow align-self-start ">
+                <div className='text-center  postsNumber text-black fs-4 p-4'>
                   Number Of Posts (<span className='postsNum'>{posts.length}</span>)
                 </div>
               </div>
@@ -141,7 +150,7 @@ export default function Data() {
                     </Link>
                     <div  className='buttons'>
                     <button onClick={deletePost} postid={post.id} className='btn me-4 btn-danger'>Delete</button>
-                    <button data-bs-toggle="modal" postid={post.id} onClick={getId}   data-bs-target="#staticBackdrop"  className='btn updateBtn btn-info'>Update</button>
+                    <button data-bs-toggle="modal" postid={post.id} onClick={showModalAndGetId}   data-bs-target="#staticBackdrop"  className='btn updateBtn btn-info'>Update</button>
                     </div>
                     </div>
                     </div>

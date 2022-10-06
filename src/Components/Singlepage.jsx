@@ -12,9 +12,9 @@ export default function Singlepage() {
 
   
   async function getPostDetails(itemId){
-    if(localStorage.getItem("myData")){
-      let myData = JSON.parse(localStorage.getItem("myData")) ;
-      let item =   myData.filter( (x)=>{
+    if(localStorage.getItem("postsData")){
+      let postsData = JSON.parse(localStorage.getItem("postsData")) ;
+      let item =   postsData.filter( (x)=>{
         return Number(x.id) === Number(itemId) 
       } )
      setitemDetails(item)
@@ -28,22 +28,22 @@ export default function Singlepage() {
     if($(".title").val() !== "" && $(".body").val() !== ""){
       $(".title-text").html($(".title").val())
       $(".body-text").html($(".body").val())
-       let myData =  JSON.parse(localStorage.getItem("myData"))  ;
-       let item =   myData.filter( (x)=>{
+       let postsData =  JSON.parse(localStorage.getItem("postsData"))  ;
+       let item =   postsData.filter( (x)=>{
         return Number(x.id) === Number(itemId) 
       } )
       if(item.title === undefined || item.title === ""){
         item[0].title = $(".title").val();
         item[0].body = $(".body").val();
         console.log(item);
-        localStorage.setItem("myData" , JSON.stringify(myData));
+        localStorage.setItem("postsData" , JSON.stringify(postsData));
         $(".title").val("");
         $(".body").val("");
       }else{
         item.title = $(".title").val();
         item.body = $(".body").val();
         console.log(item);
-        localStorage.setItem("myData" , JSON.stringify(myData));
+        localStorage.setItem("postsData" , JSON.stringify(postsData));
         $(".title").val("");
         $(".body").val("");
       }
