@@ -917,6 +917,7 @@ display: inline-block;
 }
 .post-item{
     justify-content: baseline;
+    height: 320px;
 }
 .clicked-item p {
     font-size: 18px;

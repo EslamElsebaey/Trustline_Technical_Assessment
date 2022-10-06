@@ -1,7 +1,9 @@
-import React from 'react';
+
+import React , {useEffect  } from 'react'
 import marsad_logo from "../images/marsad-logo.png"
 import monshat_logo from "../images/monshat-logo.png"
-import zid_logo from "../images/zid-logo.png"
+import zid_logo from "../images/zid-logo.png";
+import axios from "axios";
 
 
 
@@ -10,7 +12,17 @@ import zid_logo from "../images/zid-logo.png"
 
 
 const Clients = () => {
-  
+
+    async function getPosts (){
+          let data = await axios.get("https://dummyjson.com/posts");
+          console.log(data.data.posts)
+        }
+
+        useEffect(() => {
+
+          getPosts();
+        }, []);
+     
     return (
        <>
        <div className="clients">

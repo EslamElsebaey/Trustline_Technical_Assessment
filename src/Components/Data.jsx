@@ -16,9 +16,11 @@ export default function Data() {
         let postsData = JSON.parse(localStorage.getItem("postsData")) ;
         setPosts(postsData)
       }else{
-        let {data} = await axios.get("https://jsonplaceholder.typicode.com/posts");
-        setPosts(data)
-        localStorage.setItem("postsData" , JSON.stringify(data))
+        let allPosts = await axios.get("https://dummyjson.com/posts");
+        allPosts =   allPosts.data.posts;
+        setPosts(allPosts)
+        localStorage.setItem("postsData" , JSON.stringify(allPosts))
+       
       }
     }
 
@@ -122,7 +124,7 @@ export default function Data() {
   </div>
 </div>
     {/* ************************************************************************** */}
-    <div className="posts py-3">
+      <div className="posts py-3">
     <Link to={"/parentcomponent"} className='task btn' >back to home</Link>
         <div className="container">
             <div className="row g-4">
@@ -145,7 +147,7 @@ export default function Data() {
                     <Link to={`/singlepage/${post.id}`}>
                         <div  className="clicked-item" name="eslam" postid= {post.id} >
                             <h4 className='text-capitalize title-text'>{ post.title}</h4>
-                            <p className='body-text'>{post.body}</p>
+                            <p className='body-text'>{ post.body.slice(0 , 250) }</p>
                         </div>
                     </Link>
                     <div  className='buttons'>
@@ -158,7 +160,7 @@ export default function Data() {
                 })}
             </div>
         </div>
-    </div>
+    </div> 
     </>
   )
 }
